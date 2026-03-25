@@ -1,4 +1,4 @@
-export interface PurchaseItem<T> {
+export interface PurchaseItem {
     productId: number
     quantity: number
     price: number
@@ -6,12 +6,6 @@ export interface PurchaseItem<T> {
 
 export interface Purchase<T> {
     success: boolean;
-    data: {
-        id: number;
-        customerName: string;
-        purchaseDate: string;
-        items: [PurchaseItem<T>];
-        totalPrice: number
-    }
+    data: T | null;
     message: string;
 }
