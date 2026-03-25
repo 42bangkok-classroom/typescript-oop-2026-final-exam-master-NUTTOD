@@ -13,6 +13,6 @@ export class ProductService {
       success: true,
       data: showData,
       message: 'Fetched products successfully',
-    };
+    } as Product<object>;
   }
 }
