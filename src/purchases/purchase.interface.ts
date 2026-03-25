@@ -1,11 +1,13 @@
 export interface PurchaseItem<T> {
-    productId: number
-    quantity: number
-    price: number
+    item: {
+        productId: number
+        quantity: number
+        price: number
+    }
 }
 
 export interface Purchase<T> {
     success: boolean;
-    data: T | null | PurchaseItem<T>;
+    data: PurchaseItem<T>;
     message: string;
 }
