@@ -8,7 +8,7 @@ export class ProductService {
   findAll(): Product<object> {
     const filepath = path.join(process.cwd(), 'data', 'products.json');
     const data = fs.readFileSync(filepath, 'utf-8');
-    const showData: Product<object> = JSON.parse(data);
+    const showData: object = JSON.parse(data);
     return {
       success: true,
       data: showData,
