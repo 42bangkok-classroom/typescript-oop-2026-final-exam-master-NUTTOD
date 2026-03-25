@@ -7,7 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  status(): ApiResponse<object> {
+  getHello(): ApiResponse<object> {
     return this.appService.statusCheck();
   }
 }
