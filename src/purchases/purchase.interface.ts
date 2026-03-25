@@ -10,7 +10,7 @@ export interface Purchase<T> {
         id: number;
         customerName: string;
         purchaseDate: string;
-        items: PurchaseItem<T>;
+        items: [PurchaseItem<T>];
         totalPrice: number
     }
     message: string;
