@@ -1,5 +1,5 @@
 export interface Product<T> {
-    success: boolean;
-    data: T | null;
-    message: string;
-  }
+  success: boolean;
+  data: T | null;
+  message: string;
+}
