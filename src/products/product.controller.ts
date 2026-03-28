@@ -8,6 +8,11 @@ export class ProductController {
 
   @Get('products')
   getAll(): ApiResponse<object> {
-    return this.productService.findAll();
+    const products = this.productService.findAll();
+    return {
+      success: true,
+      data: products,
+      message: 'Fetched products successfully'
+    }
   }
 }
