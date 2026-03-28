@@ -1,4 +1,4 @@
-export interface Product<T> {
+export interface ApiResponse<T> {
   success: boolean;
   data: T | null;
   message: string;
