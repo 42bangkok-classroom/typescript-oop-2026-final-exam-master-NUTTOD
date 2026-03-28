@@ -1,4 +1,4 @@
-export interface PurchaseItem {
+export interface Purchase {
   id: number;
   customerName: string;
   purchaseDate: string;
@@ -12,8 +12,8 @@ export interface PurchaseItem {
   totalPrice: number;
 }
 
-export interface Purchase<PurchaseItem> {
+export interface ApiResponse<T> {
   success: boolean;
-  data: PurchaseItem | null;
+  data: T | null;
   message: string;
 }

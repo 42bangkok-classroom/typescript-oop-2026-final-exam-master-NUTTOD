@@ -12,7 +12,7 @@ export class ProductController {
     return {
       success: true,
       data: products,
-      message: 'Fetched products successfully'
-    }
+      message: 'Fetched products successfully',
+    };
   }
 }

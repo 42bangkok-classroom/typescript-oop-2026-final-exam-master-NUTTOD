@@ -1,14 +1,18 @@
 import { Controller, Get } from '@nestjs/common';
-import type { Purchase } from './purchase.interface';
+import type { ApiResponse } from './purchase.interface';
 import { PurchaseService } from './purchase.service';
-import { PurchaseItem } from './purchase.interface';
 
 @Controller()
 export class PurchaseController {
-  constructor(private readonly productService: PurchaseService) {}
+  constructor(private readonly PurchaseService: PurchaseService) {}
 
   @Get('purchases')
-  getAll(): Purchase<PurchaseItem> {
-    return this.productService.findAll();
+  getAll(): ApiResponse<object> {
+    const data = this.PurchaseService.findAll();
+    return {
+      success: true,
+      data: data,
+      message: 'Fetched purchases successfully',
+    };
   }
 }
