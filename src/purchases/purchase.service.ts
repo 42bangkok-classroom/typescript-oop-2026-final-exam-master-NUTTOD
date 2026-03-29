@@ -18,7 +18,7 @@ export class PurchaseService {
       purchase = purchase.filter((p) =>
         p.customerName
           .toLocaleLowerCase()
-          .includes(customerName.toLocaleLowerCase()),
+          .includes(customerName.toLowerCase()),
       );
     }
 
